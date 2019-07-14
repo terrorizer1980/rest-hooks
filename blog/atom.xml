@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://resthooks.io/blog</id>
+    <title>Rest Hooks Blog</title>
+    <updated>2019-07-10T06:00:00Z</updated>
+    <generator>Feed for Node.js</generator>
+    <link rel="alternate" href="https://resthooks.io/blog"/>
+    <subtitle>The best place to stay up-to-date with the latest Rest Hooks news and events.</subtitle>
+    <logo>https://resthooks.io/img/rest_hooks_logo.svg</logo>
+    <rights>Copyright © 2019 Coinbase</rights>
+    <entry>
+        <title type="html"><![CDATA[Announcing Rest Hooks 2.0]]></title>
+        <id>https://resthooks.io/blog/2019/07/10/Announcing-Rest-Hooks-2.0.html</id>
+        <link href="https://resthooks.io/blog/2019/07/10/Announcing-Rest-Hooks-2.0.html">
+        </link>
+        <updated>2019-07-10T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>We use <a href="https://semver.org/">SemVer</a> for Rest Hooks - so 2.0 represents some breaking changes. To minimize disruption
+we have been carefully considering these changes and awaiting community feedback to be confident
+these are the right changes to make.</p>
+<p>While some of these changes are simple renames to make the library more intuitive - some represent
+important progress to empowering the next chapter of Rest Hooks.</p>
+<p>See <a href="https://github.com/coinbase/rest-hooks/releases/tag/2.0.0">https://github.com/coinbase/rest-hooks/releases/tag/2.0.0</a> for a complete list of changes</p>
+]]></summary>
+        <author>
+            <name>Nathaniel Tucker</name>
+            <uri>https://twitter.com/npinp</uri>
+        </author>
+    </entry>
+</feed>

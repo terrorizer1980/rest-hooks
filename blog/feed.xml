@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Rest Hooks Blog</title>
+        <link>https://resthooks.io/blog</link>
+        <description>The best place to stay up-to-date with the latest Rest Hooks news and events.</description>
+        <lastBuildDate>Wed, 10 Jul 2019 06:00:00 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>Feed for Node.js</generator>
+        <image>
+            <title>Rest Hooks Blog</title>
+            <url>https://resthooks.io/img/rest_hooks_logo.svg</url>
+            <link>https://resthooks.io/blog</link>
+        </image>
+        <copyright>Copyright © 2019 Coinbase</copyright>
+        <item>
+            <title><![CDATA[Announcing Rest Hooks 2.0]]></title>
+            <link>https://resthooks.io/blog/2019/07/10/Announcing-Rest-Hooks-2.0.html</link>
+            <guid>https://resthooks.io/blog/2019/07/10/Announcing-Rest-Hooks-2.0.html</guid>
+            <pubDate>Wed, 10 Jul 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>We use <a href="https://semver.org/">SemVer</a> for Rest Hooks - so 2.0 represents some breaking changes. To minimize disruption
+we have been carefully considering these changes and awaiting community feedback to be confident
+these are the right changes to make.</p>
+<p>While some of these changes are simple renames to make the library more intuitive - some represent
+important progress to empowering the next chapter of Rest Hooks.</p>
+<p>See <a href="https://github.com/coinbase/rest-hooks/releases/tag/2.0.0">https://github.com/coinbase/rest-hooks/releases/tag/2.0.0</a> for a complete list of changes</p>
+]]></description>
+        </item>
+    </channel>
+</rss>
