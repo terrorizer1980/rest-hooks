@@ -100,7 +100,7 @@ shape.</p>
 <pre><code class="hljs css language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span>
   Resource<span class="token punctuation">,</span>
   MutateShape<span class="token punctuation">,</span>
-  SchemaBase<span class="token punctuation">,</span>
+  SchemaDetail<span class="token punctuation">,</span>
   AbstractInstanceType<span class="token punctuation">,</span>
 <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'rest-hooks'</span><span class="token punctuation">;</span>
 
@@ -109,7 +109,7 @@ shape.</p>
   <span class="token keyword">static</span> createShape<span class="token operator">&lt;</span><span class="token constant">T</span> <span class="token keyword">extends</span> <span class="token class-name">typeof</span> Resource<span class="token operator">></span><span class="token punctuation">(</span>
     <span class="token keyword">this</span><span class="token punctuation">:</span> <span class="token constant">T</span><span class="token punctuation">,</span>
   <span class="token punctuation">)</span><span class="token punctuation">:</span> MutateShape<span class="token operator">&lt;</span>
-    SchemaBase<span class="token operator">&lt;</span>AbstractInstanceType<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">>></span><span class="token punctuation">,</span>
+    SchemaDetail<span class="token operator">&lt;</span>AbstractInstanceType<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">>></span><span class="token punctuation">,</span>
     <span class="token builtin">any</span><span class="token punctuation">,</span>
     Partial<span class="token operator">&lt;</span>AbstractInstanceType<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">>></span>
   <span class="token operator">></span> <span class="token punctuation">{</span>
