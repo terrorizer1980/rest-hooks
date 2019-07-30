@@ -127,7 +127,12 @@ awkward. Additionally, manipulating the request/response based on fetch params <
 cumbersome when the fetch method had to parse the url</a>
 instead of just access those params itself.</p>
 <ul>
-<li><p>getUrl() -&gt; getFetchKey()</p></li>
+<li><p><a href="/docs/guides/endpoints#rpc">getUrl() -&gt; getFetchKey() + fetch()</a></p>
+<ul>
+<li>If you were setting getUrl() before, you'll need to also override the <a href="/docs/api/FetchShape#fetchparams-param-body-payload-promise-any">FetchShape.fetch()</a>. getFetchKey() is only used as a lookup
+key in the results table cache. <a href="/docs/api/FetchShape#fetchparams-param-body-payload-promise-any">FetchShape.fetch()</a>
+is responsible for constructing the actual url.</li>
+</ul></li>
 <li><p>fetch(url: string, body: Body) -&gt; fetch(params: Params, body: Body)</p></li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="hook-composition"></a><a href="#hook-composition" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hook composition</h4>
@@ -161,7 +166,7 @@ are needed.</p>
 <li>partialUpdateRequest() -&gt; partialUpdateShape()</li>
 <li>deleteRequest() -&gt; deleteShape()</li>
 <li><code>&lt;CacheProvider manager={myNetworkManager} subscriptionManager={mySubcriptionManager}&gt;</code> -&gt; <code>&lt;CacheProvider managers={[myNetworkManager, mySubscriptionManager]}&gt;</code></li>
-<li>FetchShape.getUrl() -&gt; FetchShape.getFetchKey()</li>
+<li><a href="/docs/guides/endpoints#rpc">FetchShape.getUrl() -&gt; FetchShape.getFetchKey() + FetchShape.fetch()</a></li>
 <li>FetchShape.fetch(url: string, body: Body) -&gt; FetchShape.fetch(params: Params, body: Body)</li>
 <li>SchemaBase -&gt; SchemaDetail; SchemaArray -&gt; SchemaList</li>
 <li>useError() returns error instead of throwing</li>
