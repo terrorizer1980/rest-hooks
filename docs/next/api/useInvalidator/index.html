@@ -67,6 +67,7 @@
 </span></div></div></div></div>
 <p>Mostly useful for imperatively invalidating the cache, with a similar signature to
 <a href="/docs/next/api/useFetcher">useFetcher</a>.</p>
+<p>Sending a <code>null</code> to params results in a no-op.</p>
 <p>When used in conjunction with <a href="/docs/next/api/FetchShape#invalidifstale-boolean">invalidIfStale</a>
 it can force a component to re-suspend even if it has already fetched the data. Normally
 <a href="/docs/next/api/useresource">useResource</a> will not suspend if the data is in the cache, even if it
