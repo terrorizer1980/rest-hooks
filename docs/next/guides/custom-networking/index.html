@@ -85,7 +85,7 @@ library to be tree-shaken away.</p>
     <span class="token keyword">this</span><span class="token punctuation">:</span> <span class="token constant">T</span><span class="token punctuation">,</span>
     method<span class="token punctuation">:</span> Method<span class="token punctuation">,</span>
     url<span class="token punctuation">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
-    body<span class="token operator">?</span><span class="token punctuation">:</span> Readonly<span class="token operator">&lt;</span>object<span class="token operator">></span><span class="token punctuation">,</span>
+    body<span class="token operator">?</span><span class="token punctuation">:</span> Readonly<span class="token operator">&lt;</span>object <span class="token operator">|</span> <span class="token builtin">string</span><span class="token operator">></span><span class="token punctuation">,</span>
   <span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">let</span> req <span class="token operator">=</span> request<span class="token punctuation">[</span>method<span class="token punctuation">]</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'error'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>fetchPlugin<span class="token punctuation">)</span> req <span class="token operator">=</span> req<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>fetchPlugin<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -115,7 +115,7 @@ library to be tree-shaken away.</p>
     <span class="token keyword">this</span><span class="token punctuation">:</span> <span class="token constant">T</span><span class="token punctuation">,</span>
     method<span class="token punctuation">:</span> Method<span class="token punctuation">,</span>
     url<span class="token punctuation">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
-    body<span class="token operator">?</span><span class="token punctuation">:</span> Readonly<span class="token operator">&lt;</span>object<span class="token operator">></span>
+    body<span class="token operator">?</span><span class="token punctuation">:</span> Readonly<span class="token operator">&lt;</span>object <span class="token operator">|</span> <span class="token builtin">string</span><span class="token operator">></span>
   <span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">let</span> options<span class="token punctuation">:</span> RequestInit <span class="token operator">=</span> <span class="token punctuation">{</span>
       method<span class="token punctuation">:</span> method<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
@@ -144,7 +144,7 @@ library to be tree-shaken away.</p>
     <span class="token keyword">this</span><span class="token punctuation">:</span> <span class="token constant">T</span><span class="token punctuation">,</span>
     method<span class="token punctuation">:</span> Method<span class="token punctuation">,</span>
     url<span class="token punctuation">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
-    body<span class="token operator">?</span><span class="token punctuation">:</span> Readonly<span class="token operator">&lt;</span>object<span class="token operator">></span>
+    body<span class="token operator">?</span><span class="token punctuation">:</span> Readonly<span class="token operator">&lt;</span>object <span class="token operator">|</span> <span class="token builtin">string</span><span class="token operator">></span>
   <span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token keyword">await</span> axios<span class="token punctuation">[</span>method<span class="token punctuation">]</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> body<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
