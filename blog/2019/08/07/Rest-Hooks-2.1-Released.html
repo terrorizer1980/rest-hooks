@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Rest Hooks 2.1 Released · Rest Hooks</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## New Features"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Rest Hooks 2.1 Released · Rest Hooks"/><meta property="og:type" content="website"/><meta property="og:url" content="https://resthooks.io/blog/2019/08/07/Rest-Hooks-2.1-Released"/><meta property="og:description" content="## New Features"/><meta property="og:image" content="https://resthooks.io/img/rest_hooks_logo.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://resthooks.io/img/rest_hooks_logo.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://resthooks.io/blog/atom.xml" title="Rest Hooks Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://resthooks.io/blog/feed.xml" title="Rest Hooks Blog RSS Feed"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-138752992-1', 'auto');
+              ga('send', 'pageview');
+            </script><link rel="preload" href="/font/Graphik-Regular-Web.woff2" as="font" type="font/woff2"/><link rel="preload" href="/font/Graphik-RegularItalic-Web.woff2" as="font" type="font/woff2"/><link rel="preload" href="/font/Graphik-Semibold-Web.woff2" as="font" type="font/woff2"/><link rel="preload" href="/font/Graphik-SemiboldItalic-Web.woff2" as="font" type="font/woff2"/><script type="text/javascript" src="/scripts/sidebarScroll.js"></script><script type="text/javascript" src="/scripts/codeblock.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/rest_hooks_logo.svg" alt="Rest Hooks"/><h2 class="headerTitleWithLogo">Rest Hooks</h2></a><a href="/versions"><h3>2.1</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/getting-started/installation" target="_self">Getting Started</a></li><li class=""><a href="/docs/api/README" target="_self">API</a></li><li class=""><a href="/docs/guides/resource-types" target="_self">Resource Definitions</a></li><li class="siteNavGroupActive"><a href="/blog/" target="_self">Blog</a></li><li class=""><a href="https://www.github.com/coinbase/rest-hooks" target="_self">Github</a></li><li class=""><a href="https://codesandbox.io/s/rest-hooks-hinux?fontsize=14&amp;module=%2Fsrc%2Fpages%2FIssueList.tsx" target="_self">🎮 Demo</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Recent Posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Recent Posts</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/blog/2019/08/07/Rest-Hooks-2.1-Released">Rest Hooks 2.1 Released</a></li><li class="navListItem"><a class="navItem" href="/blog/2019/07/13/Announcing-Rest-Hooks-2.0">Announcing Rest Hooks 2.0</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2019/08/07/Rest-Hooks-2.1-Released">Rest Hooks 2.1 Released</a></h1><p class="post-meta">August 7, 2019</p><div class="authorBlock"><p class="post-authorName"><a href="https://twitter.com/npinp" target="_blank" rel="noreferrer noopener">Nathaniel Tucker</a></p><div class="authorPhoto"><a href="https://twitter.com/npinp" target="_blank" rel="noreferrer noopener"><img src="https://graph.facebook.com/7941978/picture/?height=200&amp;width=200" alt="Nathaniel Tucker"/></a></div></div></header><div><span><h2><a class="anchor" aria-hidden="true" id="new-features"></a><a href="#new-features" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>New Features</h2>
+<h3><a class="anchor" aria-hidden="true" id="reduced-bundle-size-with-custom-networking-library"></a><a href="#reduced-bundle-size-with-custom-networking-library" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reduced bundle size with custom networking library</h3>
+<p>Resource comes with a default <code>fetch()</code> implementation to make getting started easy.
+It uses <a href="http://visionmedia.github.io/superagent/">superagent</a> as the networking library
+due to its server-side support as well as nice interface via the <a href="https://en.wikipedia.org/wiki/Builder_pattern">builder pattern</a>.
+However, this comes at the cost of 6kb gziped added to the bundle. For those who want
+to <a href="https://resthooks.io/docs/guides/custom-networking">use another networking library</a> this is quite a cost to pay for a library that itself
+is well under 10kb gzip.</p>
+<p>To solve this problem there is a new exported called <code>SimpleResource</code>. This provides
+all the Resource behavior without the <code>fetch()</code> implementation. If you're customizing
+<code>fetch()</code> or want to customize <code>fetch()</code>, simply <a href="https://resthooks.io/docs/guides/custom-networking">follow the instructions</a> to use
+SimpleResource as your base class now. With tree-shaking this will leave <a href="(http://visionmedia.github.io/superagent/)">superagent</a>
+out of your bundle and save a cool 6kb gzip.</p>
+<p><a href="https://github.com/coinbase/rest-hooks/pull/113">Enable customizing networking library reducing bundle size #113</a></p>
+<!--truncate-->
+<h3><a class="anchor" aria-hidden="true" id="rpcaction-purgeaction"></a><a href="#rpcaction-purgeaction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>RPCAction, PurgeAction</h3>
+<p>RPCAction, PurgeAction types join ReceiveAction and FetchAction as exportes from Rest Hooks.
+Internally Rest Hooks dispatches actions (plain objects) that describe what Rest Hooks should do.
+The structure of these actions is typed and previously only some of those types were actually
+exported. Now you can get access to all of them. This is most useful for building your own <a href="https://resthooks.io/docs/api/Manager">custom
+managers</a>.</p>
+<p><a href="https://github.com/coinbase/rest-hooks/pull/119">Export new types RPCAction, PurgeAction #119</a></p>
+<h2><a class="anchor" aria-hidden="true" id="improved-debugging"></a><a href="#improved-debugging" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Improved Debugging</h2>
+<p>Sometimes the backend can fail and return bad responses - even without an HTTP error code.
+It would behoove any fetching library to gracefully handle those cases and inform the user what
+happened.</p>
+<p>Previously there was a check for this very case - but it was only included in development mode.
+Having certain bug checking code only exist in development mode makes sense for errors that
+would exist and be caught in the client code. However, for issues independant of client (like
+servers) this is an unreasonable restriction.</p>
+<p>To solve this, the default <code>fetch()</code> implementation in <code>Resource</code> has been updated to
+check for valid responses even in production. Its checking logic has also been improved.
+Additionally the internal action dispatching types have been updated to not allow void
+responses for anything besides a PurgeAction. This is important to enforce voids are not
+passed around as they have no meaning as the result of a fetch. This leads the way to <a href="https://github.com/coinbase/rest-hooks/issues/120">further
+type refinements that enforce this as the FetchShape.fetch()</a>
+level as to ensure user implementations provide those same guarantees.</p>
+<p>Now even in production - if the API soft errors by returning an invalid response without
+an error status code you will get a &quot;JSON expected but not returned from API&quot; error response.</p>
+<p><a href="https://github.com/coinbase/rest-hooks/pull/119">Handle null fetch response even in production #119</a></p>
+<h2><a class="anchor" aria-hidden="true" id="type-refinements"></a><a href="#type-refinements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Type refinements</h2>
+<p><code>String</code> is considered a valid payload to be sent in requests, so it has been added to the union along
+with <code>object</code>. This makes API really as flexible as it should be.</p>
+<p><a href="https://github.com/coinbase/rest-hooks/pull/116">Allow string type for body (payload) parameters </a></p>
+<h2><a class="anchor" aria-hidden="true" id="final-notes"></a><a href="#final-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Final notes</h2>
+<p>Please try out the new release and <a href="https://github.com/coinbase/rest-hooks/issues">give feedback</a>
+if there are any issues or if things are working great! We've got a lot of great new features
+coming down the pipeline and we hope to see your contributions as well. 😊</p>
+<p><a href="https://github.com/coinbase/rest-hooks/releases/tag/2.1.0">Full set of 2.1 release commits</a></p>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/blog">Recent Posts</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#new-features">New Features</a><ul class="toc-headings"><li><a href="#reduced-bundle-size-with-custom-networking-library">Reduced bundle size with custom networking library</a></li><li><a href="#rpcaction-purgeaction">RPCAction, PurgeAction</a></li></ul></li><li><a href="#improved-debugging">Improved Debugging</a></li><li><a href="#type-refinements">Type refinements</a></li><li><a href="#final-notes">Final notes</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/rest_hooks_logo.svg" alt="Rest Hooks" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/getting-started/installation">Getting Started</a><a href="/docs/guides/resource-types">Resource Definitions</a><a href="/docs/api/README">API Reference</a></div><div><h5>Community</h5><a href="/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/rest-hooks" target="_blank" rel="noreferrer noopener">Stack Overflow</a></div><div><h5>More</h5><a href="https://github.com/coinbase/rest-hooks">GitHub</a><a class="github-button" href="https://github.com/coinbase/rest-hooks" data-icon="octicon-star" data-count-href="/coinbase/rest-hooks/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 Coinbase<br/>Some icons copyright Font Awesome and Noun Project (Hassan ali, ProSymbols)</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '52e661c10738fd114bcf68d537358c16',
+                indexName: 'coinbase-rest-hooks',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["version:2.1"]}
+              });
+            </script></body></html>

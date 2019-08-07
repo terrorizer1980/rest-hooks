@@ -4,7 +4,7 @@
         <title>Rest Hooks Blog</title>
         <link>https://resthooks.io/blog</link>
         <description>The best place to stay up-to-date with the latest Rest Hooks news and events.</description>
-        <lastBuildDate>Sat, 13 Jul 2019 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 07 Aug 2019 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,27 @@
             <link>https://resthooks.io/blog</link>
         </image>
         <copyright>Copyright © 2019 Coinbase</copyright>
+        <item>
+            <title><![CDATA[Rest Hooks 2.1 Released]]></title>
+            <link>https://resthooks.io/blog/2019/08/07/Rest-Hooks-2.1-Released.html</link>
+            <guid>https://resthooks.io/blog/2019/08/07/Rest-Hooks-2.1-Released.html</guid>
+            <pubDate>Wed, 07 Aug 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<h2><a class="anchor" aria-hidden="true" id="new-features"></a><a href="#new-features" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>New Features</h2>
+<h3><a class="anchor" aria-hidden="true" id="reduced-bundle-size-with-custom-networking-library"></a><a href="#reduced-bundle-size-with-custom-networking-library" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reduced bundle size with custom networking library</h3>
+<p>Resource comes with a default <code>fetch()</code> implementation to make getting started easy.
+It uses <a href="http://visionmedia.github.io/superagent/">superagent</a> as the networking library
+due to its server-side support as well as nice interface via the <a href="https://en.wikipedia.org/wiki/Builder_pattern">builder pattern</a>.
+However, this comes at the cost of 6kb gziped added to the bundle. For those who want
+to <a href="https://resthooks.io/docs/guides/custom-networking">use another networking library</a> this is quite a cost to pay for a library that itself
+is well under 10kb gzip.</p>
+<p>To solve this problem there is a new exported called <code>SimpleResource</code>. This provides
+all the Resource behavior without the <code>fetch()</code> implementation. If you're customizing
+<code>fetch()</code> or want to customize <code>fetch()</code>, simply <a href="https://resthooks.io/docs/guides/custom-networking">follow the instructions</a> to use
+SimpleResource as your base class now. With tree-shaking this will leave <a href="(http://visionmedia.github.io/superagent/)">superagent</a>
+out of your bundle and save a cool 6kb gzip.</p>
+<p><a href="https://github.com/coinbase/rest-hooks/pull/113">Enable customizing networking library reducing bundle size #113</a></p>
+]]></description>
+        </item>
         <item>
             <title><![CDATA[Announcing Rest Hooks 2.0]]></title>
             <link>https://resthooks.io/blog/2019/07/13/Announcing-Rest-Hooks-2.0.html</link>
