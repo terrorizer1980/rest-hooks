@@ -72,7 +72,7 @@ you won't need to make major changes to your code.</p>
   ReadShape<span class="token punctuation">,</span>
   SchemaList<span class="token punctuation">,</span>
   AbstractInstanceType<span class="token punctuation">,</span>
-  RequestOptions<span class="token punctuation">,</span>
+  FetchOptions<span class="token punctuation">,</span>
 <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'rest-hooks'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">RatingResource</span> <span class="token keyword">extends</span> <span class="token class-name">Resource</span> <span class="token punctuation">{</span>
@@ -87,7 +87,7 @@ you won't need to make major changes to your code.</p>
 
   <span class="token keyword">static</span> urlRoot <span class="token operator">=</span> <span class="token string">'/ratings'</span><span class="token punctuation">;</span>
 
-  <span class="token keyword">static</span> <span class="token function">getRequestOptions</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> RequestOptions <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> <span class="token function">getFetchOptions</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> FetchOptions <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">{</span>
       dataExpiryLength<span class="token punctuation">:</span> <span class="token number">10</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">,</span> <span class="token comment">// 10 minutes</span>
     <span class="token punctuation">}</span><span class="token punctuation">;</span>

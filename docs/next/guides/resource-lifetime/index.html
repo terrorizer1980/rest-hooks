@@ -70,9 +70,9 @@ which will be passed on to all <a href="/docs/next/api/FetchShape">fetch shape</
 <p><code>LongLivingResource.ts</code></p>
 <pre><code class="hljs css language-typescript"><span class="token comment">// We can now extend LongLivingResource to get a resource that will be cached for one hour</span>
 <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">LongLivingResource</span> <span class="token keyword">extends</span> <span class="token class-name">Resource</span> <span class="token punctuation">{</span>
-  <span class="token keyword">static</span> <span class="token function">getRequestOptions</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> <span class="token function">getFetchOptions</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">{</span>
-      <span class="token operator">...</span><span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getRequestOptions</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token operator">...</span><span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getFetchOptions</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
       dataExpiryLength<span class="token punctuation">:</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">,</span> <span class="token comment">// one hour</span>
     <span class="token punctuation">}</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
@@ -82,9 +82,9 @@ which will be passed on to all <a href="/docs/next/api/FetchShape">fetch shape</
 <p><code>NoRetryResource.ts</code></p>
 <pre><code class="hljs css language-typescript"><span class="token comment">// We can now extend NoRetryResource to get a resource that will never retry on network error</span>
 <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">NoRetryResource</span> <span class="token keyword">extends</span> <span class="token class-name">Resource</span> <span class="token punctuation">{</span>
-  <span class="token keyword">static</span> <span class="token function">getRequestOptions</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> <span class="token function">getFetchOptions</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">{</span>
-      <span class="token operator">...</span><span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getRequestOptions</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token operator">...</span><span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getFetchOptions</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
       errorExpiryLength<span class="token punctuation">:</span> <span class="token number">Infinity</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
