@@ -4,7 +4,7 @@
         <title>Rest Hooks Blog</title>
         <link>https://resthooks.io/blog</link>
         <description>The best place to stay up-to-date with the latest Rest Hooks news and events.</description>
-        <lastBuildDate>Wed, 07 Aug 2019 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 28 Oct 2019 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,18 @@
             <link>https://resthooks.io/blog</link>
         </image>
         <copyright>Copyright © 2019 Coinbase</copyright>
+        <item>
+            <title><![CDATA[Rest Hooks 2.2 Released]]></title>
+            <link>https://resthooks.io/blog/2019/10/28/Rest-Hooks-2.2-Released.html</link>
+            <guid>https://resthooks.io/blog/2019/10/28/Rest-Hooks-2.2-Released.html</guid>
+            <pubDate>Mon, 28 Oct 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>2.2 comes with the eagerly awaited programmable optimistic updates. This enables two very important use cases:
+optimistic update on create and infinite pagination.</p>
+<p>The bigger part of this release is introducing two new hooks that enable an incremental migration path to
+3.0 planned changes. <a href="https://resthooks.io/docs/api/useCacheNew">useCacheNew()</a> and <a href="https://resthooks.io/docs/api/useresourcenew">useResourceNew()</a> are added in this release, allowing incremental adoption of the new selection logic
+that will become the default in 3.0. More details below.</p>
+]]></description>
+        </item>
         <item>
             <title><![CDATA[Rest Hooks 2.1 Released]]></title>
             <link>https://resthooks.io/blog/2019/08/07/Rest-Hooks-2.1-Released.html</link>

@@ -2,12 +2,29 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://resthooks.io/blog</id>
     <title>Rest Hooks Blog</title>
-    <updated>2019-08-07T06:00:00Z</updated>
+    <updated>2019-10-28T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://resthooks.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Rest Hooks news and events.</subtitle>
     <logo>https://resthooks.io/img/rest_hooks_logo.svg</logo>
     <rights>Copyright © 2019 Coinbase</rights>
+    <entry>
+        <title type="html"><![CDATA[Rest Hooks 2.2 Released]]></title>
+        <id>https://resthooks.io/blog/2019/10/28/Rest-Hooks-2.2-Released.html</id>
+        <link href="https://resthooks.io/blog/2019/10/28/Rest-Hooks-2.2-Released.html">
+        </link>
+        <updated>2019-10-28T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>2.2 comes with the eagerly awaited programmable optimistic updates. This enables two very important use cases:
+optimistic update on create and infinite pagination.</p>
+<p>The bigger part of this release is introducing two new hooks that enable an incremental migration path to
+3.0 planned changes. <a href="https://resthooks.io/docs/api/useCacheNew">useCacheNew()</a> and <a href="https://resthooks.io/docs/api/useresourcenew">useResourceNew()</a> are added in this release, allowing incremental adoption of the new selection logic
+that will become the default in 3.0. More details below.</p>
+]]></summary>
+        <author>
+            <name>Nathaniel Tucker</name>
+            <uri>https://twitter.com/npinp</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Rest Hooks 2.1 Released]]></title>
         <id>https://resthooks.io/blog/2019/08/07/Rest-Hooks-2.1-Released.html</id>
