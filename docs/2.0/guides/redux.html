@@ -62,14 +62,14 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/coinbase/rest-hooks/edit/master/docs/guides/redux.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Redux integration</h1></header><article><div><span><p>Using <a href="https://redux.js.org/">redux</a> is completely optional. However, for many it means easy integration or migration
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/coinbase/rest-hooks/edit/master/docs/guides/redux.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Redux integration</h1></header><article><div><span><p>Using <a href="https://redux.js.org/">redux</a> is completely optional. However, for many it means easy integration or migration
 with existing projects, or just a nice centralized state management abstraction.</p>
 <p>Integration is fairly straightforward as rest-hooks already uses the same paradigms as redux under
 the hood. However, care should be taken to integrate the reducer and <a href="/docs/2.0/api/Manager">middlewares</a> properly
 or it won't work as expected.</p>
 <p>First make sure you have redux installed:</p>
-<div class="tabs"><div class="nav-tabs"><div id="tab-group-310-tab-311" class="nav-link active" data-group="group_310" data-tab="tab-group-310-content-311">yarn</div><div id="tab-group-310-tab-312" class="nav-link" data-group="group_310" data-tab="tab-group-310-content-312">npm</div></div><div class="tab-content"><div id="tab-group-310-content-311" class="tab-pane active" data-group="group_310" tabindex="-1"><div><span><pre><code class="hljs css language-bash"><span class="token function">yarn</span> <span class="token function">add</span> redux<br /></code></pre>
-</span></div></div><div id="tab-group-310-content-312" class="tab-pane" data-group="group_310" tabindex="-1"><div><span><pre><code class="hljs css language-bash"><span class="token function">npm</span> <span class="token function">install</span> redux<br /></code></pre>
+<div class="tabs"><div class="nav-tabs"><div id="tab-group-321-tab-322" class="nav-link active" data-group="group_321" data-tab="tab-group-321-content-322">yarn</div><div id="tab-group-321-tab-323" class="nav-link" data-group="group_321" data-tab="tab-group-321-content-323">npm</div></div><div class="tab-content"><div id="tab-group-321-content-322" class="tab-pane active" data-group="group_321" tabindex="-1"><div><span><pre><code class="hljs css language-bash"><span class="token function">yarn</span> <span class="token function">add</span> redux<br /></code></pre>
+</span></div></div><div id="tab-group-321-content-323" class="tab-pane" data-group="group_321" tabindex="-1"><div><span><pre><code class="hljs css language-bash"><span class="token function">npm</span> <span class="token function">install</span> redux<br /></code></pre>
 </span></div></div></div></div>
 <p>Note: react-redux is <em>not</em> needed for this integration (though you can use it if you want).</p>
 <p>Then you'll want to use the <a href="/docs/2.0/api/ExternalCacheProvider">&lt;ExternalCacheProvider /&gt;</a> instead of
