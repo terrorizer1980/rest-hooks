@@ -4,7 +4,7 @@
         <title>Rest Hooks Blog</title>
         <link>https://resthooks.io/blog</link>
         <description>The best place to stay up-to-date with the latest Rest Hooks news and events.</description>
-        <lastBuildDate>Mon, 28 Oct 2019 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 24 Dec 2019 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
@@ -13,6 +13,17 @@
             <link>https://resthooks.io/blog</link>
         </image>
         <copyright>Copyright © 2019 Coinbase</copyright>
+        <item>
+            <title><![CDATA[Rest Hooks 4.0 Released]]></title>
+            <link>https://resthooks.io/blog/2019/12/24/Rest-Hooks-4.0-Released.html</link>
+            <guid>https://resthooks.io/blog/2019/12/24/Rest-Hooks-4.0-Released.html</guid>
+            <pubDate>Tue, 24 Dec 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>4.0 marks the end of the migration to the new useCache() and useResource() implementations first
+introduced in 2.2. It also comes with a few other exciting features like a rewritten fetch based
+on the actual browser <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">fetch API</a>.
+Read below for more details and a migration guide.</p>
+]]></description>
+        </item>
         <item>
             <title><![CDATA[Rest Hooks 2.2 Released]]></title>
             <link>https://resthooks.io/blog/2019/10/28/Rest-Hooks-2.2-Released.html</link>
