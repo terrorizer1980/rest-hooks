@@ -16,7 +16,7 @@
         <summary type="html"><![CDATA[<p>4.0 marks the end of the migration to the new useCache() and useResource() implementations first
 introduced in 2.2. It also comes with a few other exciting features like a rewritten fetch based
 on the actual browser <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">fetch API</a>.
-Read below for more details and a migration guide.</p>
+Read below for more details and a <a href="#migration-guide">migration guide</a>.</p>
 ]]></summary>
         <author>
             <name>Nathaniel Tucker</name>
