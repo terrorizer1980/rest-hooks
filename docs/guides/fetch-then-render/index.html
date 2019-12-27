@@ -64,7 +64,7 @@
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/coinbase/rest-hooks/edit/master/docs/guides/fetch-then-render.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Fetch then Render</h1></header><article><div><span><p>A core design feature of Rest Hooks is decoupling actual data retrieval from data
 usage. This means hooks that want to ensure data availability like <a href="../api/useRetrieve">useRetrieve()</a>
-or <a href="../api/useresource">useResource()</a> actually only dispatch the request to fetch. <a href="">NetworkManager</a>
+or <a href="../api/useresource">useResource()</a> actually only dispatch the request to fetch. <a href="../api/NetworkManager">NetworkManager</a>
 then uses its global awareness to determine whether to fetch. This means, for instance, that
 duplicate requests for data can be deduped into one fetch, with one promise to resolve.</p>
 <p>Another interesting implication is that fetches started imperatively via <a href="../api/useFetcher">useFetcher</a>
