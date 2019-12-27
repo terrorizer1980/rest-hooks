@@ -4,7 +4,7 @@
         <title>Rest Hooks Blog</title>
         <link>https://resthooks.io/blog</link>
         <description>The best place to stay up-to-date with the latest Rest Hooks news and events.</description>
-        <lastBuildDate>Thu, 26 Dec 2019 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 24 Dec 2019 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
@@ -13,14 +13,6 @@
             <link>https://resthooks.io/blog</link>
         </image>
         <copyright>Copyright © 2019 Coinbase</copyright>
-        <item>
-            <title><![CDATA[Building Delightful User Experiences]]></title>
-            <link>https://resthooks.io/blog/2019/12/26/Building-Delightful-User-Experiences.html</link>
-            <guid>https://resthooks.io/blog/2019/12/26/Building-Delightful-User-Experiences.html</guid>
-            <pubDate>Thu, 26 Dec 2019 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p>Delight</p>
-]]></description>
-        </item>
         <item>
             <title><![CDATA[Rest Hooks 4.0 Released]]></title>
             <link>https://resthooks.io/blog/2019/12/24/Rest-Hooks-4.0-Released.html</link>
