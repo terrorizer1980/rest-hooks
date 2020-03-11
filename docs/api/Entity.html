@@ -167,7 +167,7 @@ cache has already been populated by another request like a list request.</p>
   <span class="token keyword">static</span> urlRoot <span class="token operator">=</span> <span class="token string">'http://test.com/user/'</span><span class="token punctuation">;</span>
 
   <span class="token comment">// right here</span>
-  <span class="token keyword">static</span> indexes <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'username'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">static</span> indexes <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'username'</span> <span class="token keyword">as</span> <span class="token keyword">const</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <pre><code class="hljs css language-tsx"><span class="token keyword">const</span> user <span class="token operator">=</span> <span class="token function">useResource</span><span class="token punctuation">(</span>UserResource<span class="token punctuation">.</span><span class="token function">detailShape</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> username<span class="token punctuation">:</span> <span class="token string">'bob'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
