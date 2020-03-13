@@ -82,8 +82,8 @@ provided ones to fit the needs of your API.</p>
 you should start off by defining the fields you expect to see, and provide defaults in case
 they are not sent for some reason. <code>Resource</code> also requires that you define a method to
 get an entity's (entity is an instance of a Resource) unique identifier. (This is used for
-book-keeping the normalized cache.) Make sure to mark all members as readonly as you
-should be treating all your data as immutable (this library assumes that)!</p>
+book-keeping the normalized cache.) Make sure to mark all members as readonly as all the data members
+are immutable (this library enforces that)!</p>
 <p>You are encouraged to add your own member methods. Often times it is useful to provide
 methods for computed values that are commonly used in your React components.</p>
 <p>A final note: <code>Resource</code> provides a factory method called <code>fromJS()</code> that will be used
