@@ -94,24 +94,24 @@ additional work is needed.</p>
 </span></div></div></div></div>
 <p>Add this section to your <code>webpack.config.js</code> under the 'rules' section.</p>
 <p>This will only run legacy transpilation, and skip all other steps as they are unneeded.</p>
-<pre><code class="hljs css language-js">rules<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+<pre><code class="hljs css language-js">rules<span class="token operator">:</span> <span class="token punctuation">[</span>
   <span class="token comment">// put other js rules here</span>
   <span class="token punctuation">{</span>
-    test<span class="token punctuation">:</span> <span class="token regex">/\.(js|mjs)$/</span><span class="token punctuation">,</span>
-    use<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'babel-loader'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    include<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token regex">/node_modules/</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    exclude<span class="token punctuation">:</span> <span class="token regex">/@babel(?:\/|\\{1,2})runtime/</span><span class="token punctuation">,</span>
-    options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      babelrc<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-      configFile<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-      compact<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-      presets<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    test<span class="token operator">:</span> <span class="token regex">/\.(js|mjs)$/</span><span class="token punctuation">,</span>
+    use<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'babel-loader'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    include<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token regex">/node_modules/</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    exclude<span class="token operator">:</span> <span class="token regex">/@babel(?:\/|\\{1,2})runtime/</span><span class="token punctuation">,</span>
+    options<span class="token operator">:</span> <span class="token punctuation">{</span>
+      babelrc<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      configFile<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      compact<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      presets<span class="token operator">:</span> <span class="token punctuation">[</span>
         <span class="token punctuation">[</span>
           require<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'babel-preset-react-app/dependencies'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-          <span class="token punctuation">{</span> helpers<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span> helpers<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
         <span class="token punctuation">]</span><span class="token punctuation">,</span>
       <span class="token punctuation">]</span><span class="token punctuation">,</span>
-      cacheDirectory<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      cacheDirectory<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span>

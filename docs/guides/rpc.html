@@ -99,12 +99,12 @@ shape.</p>
 
 <span class="token keyword">class</span> <span class="token class-name">TradeResource</span> <span class="token keyword">extends</span> <span class="token class-name">Resource</span> <span class="token punctuation">{</span>
   <span class="token comment">// ...</span>
-  <span class="token keyword">static</span> createShape<span class="token operator">&lt;</span><span class="token constant">T</span> <span class="token keyword">extends</span> <span class="token class-name">typeof</span> Resource<span class="token operator">></span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">:</span> <span class="token constant">T</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> createShape<span class="token operator">&lt;</span><span class="token constant">T</span> <span class="token keyword">extends</span> <span class="token class-name">typeof</span> Resource<span class="token operator">></span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">{</span>
       <span class="token operator">...</span><span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">createShape</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-      schema<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        trade<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">asSchema</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-        account<span class="token punctuation">:</span> AccountResource<span class="token punctuation">.</span><span class="token function">asSchema</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      schema<span class="token operator">:</span> <span class="token punctuation">{</span>
+        trade<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">asSchema</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        account<span class="token operator">:</span> AccountResource<span class="token punctuation">.</span><span class="token function">asSchema</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>

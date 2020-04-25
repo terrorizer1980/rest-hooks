@@ -69,8 +69,8 @@ is sometimes needed when calling third-party APIs that don't come with appropria
 <span class="token keyword">import</span> <span class="token punctuation">{</span> Resource <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'rest-hooks'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">ArticleResource</span> <span class="token keyword">extends</span> <span class="token class-name">Resource</span> <span class="token punctuation">{</span>
-  <span class="token keyword">readonly</span> id<span class="token punctuation">:</span> <span class="token builtin">number</span> <span class="token operator">|</span> <span class="token keyword">null</span> <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
-  <span class="token keyword">readonly</span> content<span class="token punctuation">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+  <span class="token keyword">readonly</span> id<span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">|</span> <span class="token keyword">null</span> <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token keyword">readonly</span> content<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
 
   <span class="token function">pk</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>id<span class="token punctuation">;</span>

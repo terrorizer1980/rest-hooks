@@ -113,8 +113,8 @@ where in the state tree the rest-hooks information is.</p>
 <span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">createStore</span><span class="token punctuation">(</span>
   <span class="token comment">// Now we have other reducers</span>
   <span class="token function">combineReducers</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    restHooks<span class="token punctuation">:</span> restReducer<span class="token punctuation">,</span>
-    myOtherState<span class="token punctuation">:</span> otherReducer<span class="token punctuation">,</span>
+    restHooks<span class="token operator">:</span> restReducer<span class="token punctuation">,</span>
+    myOtherState<span class="token operator">:</span> otherReducer<span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
   <span class="token function">applyMiddleware</span><span class="token punctuation">(</span>manager<span class="token punctuation">.</span><span class="token function">getMiddleware</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> subscriptionManager<span class="token punctuation">.</span><span class="token function">getMiddleware</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
