@@ -70,7 +70,11 @@
 <ul>
 <li>Triggers fetch:
 <ul>
-<li>On first-render and when parameters change</li>
+<li>On first-render and when parameters change
+<ul>
+<li>or required entity is deleted</li>
+<li>or imperative <a href="./useInvalidator">invalidation</a> triggered</li>
+</ul></li>
 <li>and When not in cache or result is considered stale</li>
 <li>and When no identical requests are in flight</li>
 <li>and when params are not null</li>
@@ -81,7 +85,10 @@
 </ul></li>
 <li>While Loading:
 <ul>
-<li>Returns previously cached if exists (even if stale)</li>
+<li>Returns previously cached if exists (even if stale)
+<ul>
+<li>except in case of delete or <a href="./useInvalidator">invalidation</a></li>
+</ul></li>
 <li><a href="/docs/next/guides/loading-state">Suspend rendering</a> otherwise</li>
 </ul></li>
 </ul>
