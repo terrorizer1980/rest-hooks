@@ -89,7 +89,7 @@ key of an object:</p>
 <h3><a class="anchor" aria-hidden="true" id="resource-definition"></a><a href="#resource-definition" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resource definition</h3>
 <p>In this case, you'll need to override your detail() and list() definitions to reflect
 the structure of your data. This is known as a 'schema' definition.</p>
-<pre><code class="hljs css language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Resource <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'rest-hooks'</span><span class="token punctuation">;</span>
+<pre><code class="hljs css language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Resource <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@rest-hooks/rest'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">CommentResource</span> <span class="token keyword">extends</span> <span class="token class-name">Resource</span> <span class="token punctuation">{</span>
   <span class="token keyword">static</span> detail<span class="token operator">&lt;</span><span class="token constant">T</span> <span class="token keyword">extends</span> <span class="token class-name">typeof</span> Resource<span class="token operator">></span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -118,7 +118,7 @@ define exactly what your endpoint needs.</p>
 <p>In this example, we have an RPC endpoint located at <code>/users/[id]/make_manager</code>. This endpoint
 doesn't expect any body, but is a POST request. Because it is so similar to a <a href="../api/resource#create-endpoint">create()</a>
 we'll be extended that schema definition.</p>
-<pre><code class="hljs css language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Resource <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'rest-hooks'</span><span class="token punctuation">;</span>
+<pre><code class="hljs css language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Resource <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@rest-hooks/rest'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">UserResource</span> <span class="token keyword">extends</span> <span class="token class-name">Resource</span> <span class="token punctuation">{</span>
   <span class="token keyword">static</span> makeManager<span class="token operator">&lt;</span><span class="token constant">T</span> <span class="token keyword">extends</span> <span class="token class-name">typeof</span> Resource<span class="token operator">></span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -147,7 +147,7 @@ we'll be extended that schema definition.</p>
 how do we get the currently logged in user? One way is to define a special url
 just for retrieving the current user. In this case - <code>/current_user/</code>. Since there
 is only one - we won't need to send any params.</p>
-<pre><code class="hljs css language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Resource <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'rest-hooks'</span><span class="token punctuation">;</span>
+<pre><code class="hljs css language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Resource <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@rest-hooks/rest'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">UserResource</span> <span class="token keyword">extends</span> <span class="token class-name">Resource</span> <span class="token punctuation">{</span>
   <span class="token comment">/** Retrieves current logged in user */</span>
