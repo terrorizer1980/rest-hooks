@@ -70,11 +70,11 @@ simply operates as a convenience to organize schemas.</p>
 certain hooks and their interaction is not well defined. For instance, <code>useCache()</code>
 only works with <code>ReadShape</code>s because this is the only shape that specifies the
 specific results needed.</p>
-<pre><code class="hljs css language-typescript"><span class="token keyword">interface</span> <span class="token class-name">FetchShape</span><span class="token operator">&lt;</span>
-  <span class="token constant">S</span> <span class="token keyword">extends</span> <span class="token class-name">Schema</span><span class="token punctuation">,</span>
-  Params <span class="token keyword">extends</span> <span class="token class-name">Readonly</span><span class="token operator">&lt;</span>object<span class="token operator">></span><span class="token punctuation">,</span>
-  Body <span class="token keyword">extends</span> <span class="token class-name">Readonly</span><span class="token operator">&lt;</span>object<span class="token operator">></span> <span class="token operator">|</span> <span class="token keyword">void</span>
-<span class="token operator">></span> <span class="token punctuation">{</span>
+<pre><code class="hljs css language-typescript"><span class="token keyword">interface</span> <span class="token class-name">FetchShape<span class="token operator">&lt;</span>
+  <span class="token constant">S</span> <span class="token keyword">extends</span> Schema<span class="token punctuation">,</span>
+  Params <span class="token keyword">extends</span> Readonly<span class="token operator">&lt;</span>object<span class="token operator">></span><span class="token punctuation">,</span>
+  Body <span class="token keyword">extends</span> Readonly<span class="token operator">&lt;</span>object<span class="token operator">></span> <span class="token operator">|</span> <span class="token keyword">void</span>
+<span class="token operator">></span></span> <span class="token punctuation">{</span>
   <span class="token keyword">readonly</span> <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'read'</span> <span class="token operator">|</span> <span class="token string">'mutate'</span> <span class="token operator">|</span> <span class="token string">'delete'</span><span class="token punctuation">;</span>
   <span class="token function">fetch</span><span class="token punctuation">(</span>params<span class="token operator">:</span> Params<span class="token punctuation">,</span> body<span class="token operator">:</span> Body<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token builtin">any</span><span class="token operator">></span><span class="token punctuation">;</span>
   <span class="token function">getFetchKey</span><span class="token punctuation">(</span>params<span class="token operator">:</span> Params<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>

@@ -71,11 +71,11 @@ way you please.</p>
 <pre><code class="hljs css language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> useRetrieve<span class="token punctuation">,</span> useCache<span class="token punctuation">,</span> useError<span class="token punctuation">,</span> Schema<span class="token punctuation">,</span> ReadShape <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'rest-hooks'</span><span class="token punctuation">;</span>
 
 <span class="token comment">/** If the invalidIfStale option is set we suspend if resource has expired */</span>
-<span class="token keyword">function</span> hasUsableData<span class="token operator">&lt;</span>
-  <span class="token constant">S</span> <span class="token keyword">extends</span> <span class="token class-name">Schema</span><span class="token punctuation">,</span>
-  Params <span class="token keyword">extends</span> <span class="token class-name">Readonly</span><span class="token operator">&lt;</span>object<span class="token operator">></span><span class="token punctuation">,</span>
-  Body <span class="token keyword">extends</span> <span class="token class-name">Readonly</span><span class="token operator">&lt;</span>object<span class="token operator">></span> <span class="token operator">|</span> <span class="token keyword">void</span>
-<span class="token operator">></span><span class="token punctuation">(</span>
+<span class="token keyword">function</span> <span class="token generic-function"><span class="token function">hasUsableData</span><span class="token generic class-name"><span class="token operator">&lt;</span>
+  <span class="token constant">S</span> <span class="token keyword">extends</span> Schema<span class="token punctuation">,</span>
+  Params <span class="token keyword">extends</span> Readonly<span class="token operator">&lt;</span>object<span class="token operator">></span><span class="token punctuation">,</span>
+  Body <span class="token keyword">extends</span> Readonly<span class="token operator">&lt;</span>object<span class="token operator">></span> <span class="token operator">|</span> <span class="token keyword">void</span>
+<span class="token operator">></span></span></span><span class="token punctuation">(</span>
   resource<span class="token operator">:</span> RequestResource<span class="token operator">&lt;</span>ReadShape<span class="token operator">&lt;</span><span class="token constant">S</span><span class="token punctuation">,</span> Params<span class="token punctuation">,</span> Body<span class="token operator">>></span> <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
   selectShape<span class="token operator">:</span> ReadShape<span class="token operator">&lt;</span><span class="token constant">S</span><span class="token punctuation">,</span> Params<span class="token punctuation">,</span> Body<span class="token operator">></span><span class="token punctuation">,</span>
 <span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -86,11 +86,11 @@ way you please.</p>
 <span class="token punctuation">}</span>
 
 <span class="token comment">/** Ensure a resource is available; loading and error returned explicitly. */</span>
-<span class="token keyword">function</span> useStatefulResource<span class="token operator">&lt;</span>
-  Params <span class="token keyword">extends</span> <span class="token class-name">Readonly</span><span class="token operator">&lt;</span>object<span class="token operator">></span><span class="token punctuation">,</span>
-  Body <span class="token keyword">extends</span> <span class="token class-name">Readonly</span><span class="token operator">&lt;</span>object<span class="token operator">></span> <span class="token operator">|</span> <span class="token keyword">void</span><span class="token punctuation">,</span>
-  <span class="token constant">S</span> <span class="token keyword">extends</span> <span class="token class-name">Schema</span>
-<span class="token operator">></span><span class="token punctuation">(</span>selectShape<span class="token operator">:</span> ReadShape<span class="token operator">&lt;</span><span class="token constant">S</span><span class="token punctuation">,</span> Params<span class="token punctuation">,</span> Body<span class="token operator">></span><span class="token punctuation">,</span> params<span class="token operator">:</span> Params <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">function</span> <span class="token generic-function"><span class="token function">useStatefulResource</span><span class="token generic class-name"><span class="token operator">&lt;</span>
+  Params <span class="token keyword">extends</span> Readonly<span class="token operator">&lt;</span>object<span class="token operator">></span><span class="token punctuation">,</span>
+  Body <span class="token keyword">extends</span> Readonly<span class="token operator">&lt;</span>object<span class="token operator">></span> <span class="token operator">|</span> <span class="token keyword">void</span><span class="token punctuation">,</span>
+  <span class="token constant">S</span> <span class="token keyword">extends</span> Schema
+<span class="token operator">></span></span></span><span class="token punctuation">(</span>selectShape<span class="token operator">:</span> ReadShape<span class="token operator">&lt;</span><span class="token constant">S</span><span class="token punctuation">,</span> Params<span class="token punctuation">,</span> Body<span class="token operator">></span><span class="token punctuation">,</span> params<span class="token operator">:</span> Params <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">let</span> maybePromise <span class="token operator">=</span> <span class="token function">useRetrieve</span><span class="token punctuation">(</span>selectShape<span class="token punctuation">,</span> params<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">const</span> resource <span class="token operator">=</span> <span class="token function">useCache</span><span class="token punctuation">(</span>selectShape<span class="token punctuation">,</span> params<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
