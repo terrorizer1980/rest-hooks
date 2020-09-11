@@ -77,6 +77,9 @@ static methods that do this, but their ultimate purpose is to build <a href="/do
 tell the <a href="/docs/next/api/useresource">hooks</a> how to process requests. Endpoints are provided for the
 common <code>REST</code> request types. However, it is encouraged to build your own or override the
 provided ones to fit the needs of your API.</p>
+<p>Resource extends from <a href="./Entity">Entity</a>, which includes many static methods defining how to process
+network data to ensure performance and consistency. <a href="../guides/network-transform#deserializing-fields">Deserilization</a>
+for instance can be done using the <a href="./Entity#static-schema--k-keyof-this-schema-">static schema</a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="instance"></a><a href="#instance" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Instance</h3>
 <p>Instances are mostly for you to define how you want to interact with your data. This means
 you should start off by defining the fields you expect to see, and provide defaults in case
@@ -94,14 +97,7 @@ don't use constructors.</p>
 <blockquote>
 <p>Inherited from <a href="./SimpleRecord">SimpleRecord</a></p>
 </blockquote>
-<p>This is used to create instances of the <code>Resource</code> you defined. Will copy over props provided to
-the instance in construction, among other things. <em>Be sure to always call <code>super.fromJS()</code> when
-overriding.</em></p>
-<p>Can be useful to override to:</p>
-<ul>
-<li><a href="../guides/network-transform#deserializing-fields">Deserialize fields</a></li>
-<li>Add runtime field validation</li>
-</ul>
+<p>This is used to create new entities when normalizing data. These are stored in the entities cache.</p>
 <h2><a class="anchor" aria-hidden="true" id="be-sure-to-always-provide"></a><a href="#be-sure-to-always-provide" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Be sure to always provide:</h2>
 <h3><a class="anchor" aria-hidden="true" id="pk-parent-any-key-string--string"></a><a href="#pk-parent-any-key-string--string" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>pk: (parent?: any, key?: string) =&gt; string</h3>
 <blockquote>
