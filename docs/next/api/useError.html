@@ -62,11 +62,17 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/coinbase/rest-hooks/edit/master/docs/api/useError.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">useError()</h1></header><article><div><span><pre><code class="hljs css language-typescript"><span class="token keyword">function</span> <span class="token function">useError</span><span class="token punctuation">(</span>
-  endpoint<span class="token operator">:</span> ReadEndpoint<span class="token punctuation">,</span>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/coinbase/rest-hooks/edit/master/docs/api/useError.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">useError()</h1></header><article><div><span><pre><code class="hljs css language-typescript"><span class="token keyword">interface</span> <span class="token class-name">SyntheticError</span> <span class="token keyword">extends</span> <span class="token class-name">Error</span> <span class="token punctuation">{</span>
+  status<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+  synthetic<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">useError</span><span class="token punctuation">(</span>
+  endpoint<span class="token operator">:</span> Endpoint<span class="token punctuation">,</span>
   params<span class="token operator">:</span> object <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
-<span class="token punctuation">)</span><span class="token operator">:</span> Error <span class="token operator">&amp;</span> <span class="token punctuation">{</span> status<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">)</span><span class="token operator">:</span> NetworkError <span class="token operator">|</span> Error <span class="token operator">|</span> SyntheticError <span class="token operator">|</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span>
 </code></pre>
+<p><a href="./types#networkerror">NetworkError</a></p>
 <p>Provides error information about a request. This builds on <a href="./useMeta">useMeta()</a>,
 but adds some additional logic.</p>
 <p>Used in</p>
