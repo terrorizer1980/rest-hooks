@@ -97,10 +97,10 @@ additional work is needed.</p>
 <pre><code class="hljs css language-js">rules<span class="token operator">:</span> <span class="token punctuation">[</span>
   <span class="token comment">// put other js rules here</span>
   <span class="token punctuation">{</span>
-    test<span class="token operator">:</span> <span class="token regex">/\.(js|mjs)$/</span><span class="token punctuation">,</span>
+    test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.(js|mjs)$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
     use<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'babel-loader'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    include<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token regex">/node_modules/</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    exclude<span class="token operator">:</span> <span class="token regex">/@babel(?:\/|\\{1,2})runtime/</span><span class="token punctuation">,</span>
+    include<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">node_modules</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    exclude<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">@babel(?:\/|\\{1,2})runtime</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
     options<span class="token operator">:</span> <span class="token punctuation">{</span>
       babelrc<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
       configFile<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
