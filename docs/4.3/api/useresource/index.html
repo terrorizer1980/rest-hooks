@@ -70,7 +70,12 @@
 <ul>
 <li>Triggers fetch:
 <ul>
-<li>On first-render and when parameters change</li>
+<li>On first-render
+<ul>
+<li>or parameters change</li>
+<li>or required entity is deleted</li>
+<li>or imperative <a href="./useInvalidator">invalidation</a> triggered</li>
+</ul></li>
 <li>and When not in cache or result is considered stale</li>
 <li>and When no identical requests are in flight</li>
 <li>and when params are not null</li>
