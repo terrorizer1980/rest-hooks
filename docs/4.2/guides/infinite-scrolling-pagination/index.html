@@ -78,13 +78,13 @@ to a base class can make adding pagination behavior to any of your endpoints qui
     existingResults<span class="token operator">:</span> <span class="token punctuation">{</span> results<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">}</span> <span class="token operator">|</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span>
   <span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token comment">// In case there are duplicates, Set will eliminate them.</span>
-    <span class="token keyword">const</span> <span class="token keyword">set</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+    <span class="token keyword">const</span> set <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
       <span class="token operator">...</span><span class="token punctuation">(</span>existingResults<span class="token operator">?.</span>results <span class="token operator">??</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
       <span class="token operator">...</span>newResults<span class="token punctuation">.</span>results<span class="token punctuation">,</span>
     <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token punctuation">{</span>
       <span class="token operator">...</span>newResults<span class="token punctuation">,</span>
-      results<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token keyword">set</span><span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      results<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token operator">...</span>set<span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
