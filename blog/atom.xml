@@ -2,104 +2,64 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://resthooks.io/blog</id>
     <title>Rest Hooks Blog</title>
-    <updated>2020-01-06T06:00:00.000Z</updated>
+    <updated>2020-01-06T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://resthooks.io/blog"/>
-    <subtitle>The best place to stay up-to-date with the latest Rest Hooks news and events.</subtitle>
-    <logo>https://resthooks.io/img/rest_hooks_logo.svg</logo>
-    <rights>Copyright © 2021 Coinbase</rights>
+    <subtitle>Rest Hooks Blog</subtitle>
+    <icon>https://resthooks.io/img/favicon/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Rest Hooks 4.1 Released]]></title>
-        <id>https://resthooks.io/blog/2020/01/06/Rest-Hooks-4.1-Released.html</id>
-        <link href="https://resthooks.io/blog/2020/01/06/Rest-Hooks-4.1-Released.html"/>
-        <updated>2020-01-06T06:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>4.1 comes with a more granular data definition hierarchy that will make it easier to
-write more API definitions. This marked by the introduction of a new member known
-as <a href="/docs/api/Entity">Entity</a>. <code>Entity</code> only needs a <code>pk()</code> and <code>get key()</code>, as well
-as member declarations to integrate fully.</p>
-<h3><a class="anchor" aria-hidden="true" id="entity"></a><a href="#entity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Entity</h3>
-<ul>
-<li>Useful for nested entities that don't have endpoints like LatestPrice.</li>
-<li>Useful for non-REST style APIs like GraphQL.</li>
-<li>Simplifies defining nested entities.</li>
-</ul>
-]]></summary>
+        <id>Rest Hooks 4.1 Released</id>
+        <link href="https://resthooks.io/blog/2020/01/06/Rest-Hooks-4.1-Released"/>
+        <updated>2020-01-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[4.1 comes with a more granular data definition hierarchy that will make it easier to]]></summary>
         <author>
             <name>Nathaniel Tucker</name>
-            <uri>https://twitter.com/npinp</uri>
+            <uri>https://github.com/ntucker</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Rest Hooks 4.0 Released]]></title>
-        <id>https://resthooks.io/blog/2019/12/24/Rest-Hooks-4.0-Released.html</id>
-        <link href="https://resthooks.io/blog/2019/12/24/Rest-Hooks-4.0-Released.html"/>
-        <updated>2019-12-24T06:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>4.0 marks the end of the migration to the new useCache() and useResource() implementations first
-introduced in 2.2. It also comes with a few other exciting features like a rewritten fetch based
-on the actual browser <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">fetch API</a>.
-Read below for more details and a <a href="#migration-guide">migration guide</a>.</p>
-]]></summary>
+        <id>Rest Hooks 4.0 Released</id>
+        <link href="https://resthooks.io/blog/2019/12/24/Rest-Hooks-4.0-Released"/>
+        <updated>2019-12-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[4.0 marks the end of the migration to the new useCache() and useResource() implementations first]]></summary>
         <author>
             <name>Nathaniel Tucker</name>
-            <uri>https://twitter.com/npinp</uri>
+            <uri>https://github.com/ntucker</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Rest Hooks 2.2 Released]]></title>
-        <id>https://resthooks.io/blog/2019/10/28/Rest-Hooks-2.2-Released.html</id>
-        <link href="https://resthooks.io/blog/2019/10/28/Rest-Hooks-2.2-Released.html"/>
-        <updated>2019-10-28T06:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>2.2 comes with the eagerly awaited programmable optimistic updates. This enables two very important use cases:
-optimistic update on create and infinite pagination.</p>
-<p>The bigger part of this release is introducing two new hooks that enable an incremental migration path to
-3.0 planned changes. <a href="https://resthooks.io/docs/api/useCacheNew">useCacheNew()</a> and <a href="https://resthooks.io/docs/api/useresourcenew">useResourceNew()</a> are added in this release, allowing incremental adoption of the new selection logic
-that will become the default in 3.0. More details below.</p>
-]]></summary>
+        <id>Rest Hooks 2.2 Released</id>
+        <link href="https://resthooks.io/blog/2019/10/28/Rest-Hooks-2.2-Released"/>
+        <updated>2019-10-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2.2 comes with the eagerly awaited programmable optimistic updates. This enables two very important use cases:]]></summary>
         <author>
             <name>Nathaniel Tucker</name>
-            <uri>https://twitter.com/npinp</uri>
+            <uri>https://github.com/ntucker</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Rest Hooks 2.1 Released]]></title>
-        <id>https://resthooks.io/blog/2019/08/07/Rest-Hooks-2.1-Released.html</id>
-        <link href="https://resthooks.io/blog/2019/08/07/Rest-Hooks-2.1-Released.html"/>
-        <updated>2019-08-07T06:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<h2><a class="anchor" aria-hidden="true" id="new-features"></a><a href="#new-features" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>New Features</h2>
-<h3><a class="anchor" aria-hidden="true" id="reduced-bundle-size-with-custom-networking-library"></a><a href="#reduced-bundle-size-with-custom-networking-library" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reduced bundle size with custom networking library</h3>
-<p>Resource comes with a default <code>fetch()</code> implementation to make getting started easy.
-It uses <a href="http://visionmedia.github.io/superagent/">superagent</a> as the networking library
-due to its server-side support as well as nice interface via the <a href="https://en.wikipedia.org/wiki/Builder_pattern">builder pattern</a>.
-However, this comes at the cost of 6kb gziped added to the bundle. For those who want
-to <a href="https://resthooks.io/docs/guides/custom-networking">use another networking library</a> this is quite a cost to pay for a library that itself
-is well under 10kb gzip.</p>
-<p>To solve this problem there is a new exported called <code>SimpleResource</code>. This provides
-all the Resource behavior without the <code>fetch()</code> implementation. If you're customizing
-<code>fetch()</code> or want to customize <code>fetch()</code>, simply <a href="https://resthooks.io/docs/guides/custom-networking">follow the instructions</a> to use
-SimpleResource as your base class now. With tree-shaking this will leave <a href="(http://visionmedia.github.io/superagent/)">superagent</a>
-out of your bundle and save a cool 6kb gzip.</p>
-<p><a href="https://github.com/coinbase/rest-hooks/pull/113">Enable customizing networking library reducing bundle size #113</a></p>
-]]></summary>
+        <id>Rest Hooks 2.1 Released</id>
+        <link href="https://resthooks.io/blog/2019/08/07/Rest-Hooks-2.1-Released"/>
+        <updated>2019-08-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[New Features]]></summary>
         <author>
             <name>Nathaniel Tucker</name>
-            <uri>https://twitter.com/npinp</uri>
+            <uri>https://github.com/ntucker</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Announcing Rest Hooks 2.0]]></title>
-        <id>https://resthooks.io/blog/2019/07/13/Announcing-Rest-Hooks-2.0.html</id>
-        <link href="https://resthooks.io/blog/2019/07/13/Announcing-Rest-Hooks-2.0.html"/>
-        <updated>2019-07-13T06:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>We use <a href="https://semver.org/">SemVer</a> for Rest Hooks - so 2.0 represents some breaking changes. To minimize disruption
-we have been carefully considering these changes and awaiting community feedback to be confident
-these are the right changes to make.</p>
-<p>While some of these changes are simple renames to make the library more intuitive - some represent
-important progress to empowering the next chapter of Rest Hooks.</p>
-<p>See <a href="https://github.com/coinbase/rest-hooks/releases/tag/2.0.0">https://github.com/coinbase/rest-hooks/releases/tag/2.0.0</a> for a complete list of changes</p>
-]]></summary>
+        <id>Announcing Rest Hooks 2.0</id>
+        <link href="https://resthooks.io/blog/2019/07/13/Announcing-Rest-Hooks-2.0"/>
+        <updated>2019-07-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We use SemVer for Rest Hooks - so 2.0 represents some breaking changes. To minimize disruption]]></summary>
         <author>
             <name>Nathaniel Tucker</name>
-            <uri>https://twitter.com/npinp</uri>
+            <uri>https://github.com/ntucker</uri>
         </author>
     </entry>
 </feed>
