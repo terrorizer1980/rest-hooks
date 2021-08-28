@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[49462],{78566:e=>{e.exports=JSON.parse('{"pluginId":"default","version":"5.0","label":"5.0","banner":"unmaintained","isLast":false,"docsSidebars":{}}')}}]);
