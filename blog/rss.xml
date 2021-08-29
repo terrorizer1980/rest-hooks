@@ -4,9 +4,16 @@
         <title>Rest Hooks Blog</title>
         <link>https://resthooks.io/blog</link>
         <description>Rest Hooks Blog</description>
-        <lastBuildDate>Mon, 06 Jan 2020 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 18 Feb 2020 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Rest Hooks 4.2-4.5]]></title>
+            <link>https://resthooks.io/blog/2020/02/18/Rest-Hooks-4.2-4.5</link>
+            <guid>Rest Hooks 4.2-4.5</guid>
+            <pubDate>Tue, 18 Feb 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[A lot of exciting features have been developed recently, resulting in many feature releases.]]></description>
+        </item>
         <item>
             <title><![CDATA[Rest Hooks 4.1 Released]]></title>
             <link>https://resthooks.io/blog/2020/01/06/Rest-Hooks-4.1-Released</link>
