@@ -4,9 +4,16 @@
         <title>Rest Hooks Blog</title>
         <link>https://resthooks.io/blog</link>
         <description>Rest Hooks Blog</description>
-        <lastBuildDate>Tue, 18 Feb 2020 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 29 Aug 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Experimental useController()]]></title>
+            <link>https://resthooks.io/blog/2021/08/29/Experimental-useController</link>
+            <guid>Experimental useController()</guid>
+            <pubDate>Sun, 29 Aug 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[@rest-hooks/experimental is a new]]></description>
+        </item>
         <item>
             <title><![CDATA[Rest Hooks 4.2-4.5]]></title>
             <link>https://resthooks.io/blog/2020/02/18/Rest-Hooks-4.2-4.5</link>

@@ -2,11 +2,22 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://resthooks.io/blog</id>
     <title>Rest Hooks Blog</title>
-    <updated>2020-02-18T00:00:00.000Z</updated>
+    <updated>2021-08-29T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://resthooks.io/blog"/>
     <subtitle>Rest Hooks Blog</subtitle>
     <icon>https://resthooks.io/img/favicon/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Experimental useController()]]></title>
+        <id>Experimental useController()</id>
+        <link href="https://resthooks.io/blog/2021/08/29/Experimental-useController"/>
+        <updated>2021-08-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[@rest-hooks/experimental is a new]]></summary>
+        <author>
+            <name>Nathaniel Tucker</name>
+            <uri>https://github.com/ntucker</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Rest Hooks 4.2-4.5]]></title>
         <id>Rest Hooks 4.2-4.5</id>
